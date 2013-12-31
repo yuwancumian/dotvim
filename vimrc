@@ -1,12 +1,13 @@
 set nocompatible    " be iMproved
 filetype off        " required!
 
-set rtp+=~/.vim/bundle/vundle
+set rtp+=~/.vim/bundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
 " required!
 Bundle 'gmarik/vundle'
+Bundle 'snipMate'
 Bundle 'mattn/emmet-vim'
 " vim-scripts repos
 Bundle 'jQuery'
@@ -50,6 +51,3 @@ let g:ctrlp_cmd = 'CtrlP'
 
 au BufRead,BufNewFile *.js set syntax=jquery
 
-imap <tab> <c-x><c-o> 
-set omnifunc=javascriptcomplete
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS

@@ -1,3 +1,5 @@
 bundle/*
+*.swp
+.netrwhist
 !bundle/vundle
 !bundle/snipMate
