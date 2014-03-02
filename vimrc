@@ -1,27 +1,31 @@
 set nocompatible    " be iMproved
 filetype off        " required!
 
+" let Vundle manage Vundle
+" required!
+
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 
-" let Vundle manage Vundle
-" required!
+" vim-scripts repos
 Bundle 'gmarik/vundle'
 Bundle 'snipMate'
 Bundle 'mattn/emmet-vim'
-" vim-scripts repos
+Bundle 'mattn/webapi-vim'
+Bundle 'mattn/gist-vim'
+Bundle 'junegunn/goyo.vim'
 Bundle 'jQuery'
 Bundle 'ack.vim'
 Bundle 'TabBar'
-Bundle 'ZenCoding.vim'
 Bundle 'ctrlp.vim'
-Bundle 'php.vim-for-php5'
+"Bundle 'php.vim-for-php5'
+" -------------------------- 配色 -------------------------
+" solarized 配色
+
 colorscheme icansee 
 
 filetype plugin indent on    " required!
 
-"---------------------------- 配色 -------------------------{{{2
-""solarized 配色
 
 
 "显示行号
@@ -51,3 +55,10 @@ let g:ctrlp_cmd = 'CtrlP'
 
 au BufRead,BufNewFile *.js set syntax=jquery
 
+map <s-tab> :bp<cr>
+map <tab> :bn<cr>
+
+
+map ,q :q!<CR>
+map ,w :wq <CR>
+imap jj <esc>
