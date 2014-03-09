@@ -16,13 +16,15 @@ Bundle 'mattn/gist-vim'
 Bundle 'junegunn/goyo.vim'
 Bundle 'jQuery'
 Bundle 'ack.vim'
-Bundle 'TabBar'
+Bundle 'minibufexpl.vim'
 Bundle 'ctrlp.vim'
+Bundle 'scrooloose/nerdtree'
+Bundle 'EasyColour'
 "Bundle 'php.vim-for-php5'
 " -------------------------- 配色 -------------------------
-" solarized 配色
+" 配色
 
-colorscheme icansee 
+colorscheme molokai 
 
 filetype plugin indent on    " required!
 
@@ -31,8 +33,9 @@ filetype plugin indent on    " required!
 "显示行号
 set nu
 
-"set t_Co=256
-"hi Normal ctermbg=NONE
+set t_Co=256
+hi Normal ctermbg=NONE
+
 
 "自动缩排
 set autoindent
@@ -44,14 +47,23 @@ set ruler
 set background=dark
 
 "设置代码缩进
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+
+"setup nerdtree 
+let NERDTreeWinPos = 'right'
+"autocmd vimenter * NERDTree
+"autocmd vimenter * if !argc() | NERDTree | endif
+map <C-n> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 "设置ctrlp
-let NERDTreeWinPos = 'right'
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+
+" highlight current line                                                                                                                                                                       
+set cursorline
 
 au BufRead,BufNewFile *.js set syntax=jquery
 
