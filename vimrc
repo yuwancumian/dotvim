@@ -16,7 +16,9 @@ Bundle 'mattn/gist-vim'
 Bundle 'junegunn/goyo.vim'
 Bundle 'jQuery'
 Bundle 'ack.vim'
-Bundle 'minibufexpl.vim'
+"Bundle 'minibufexpl.vim'
+Bundle 'vim-less'
+Bundle 'TabBar'
 Bundle 'ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'EasyColour'
@@ -70,7 +72,10 @@ au BufRead,BufNewFile *.js set syntax=jquery
 map <s-tab> :bp<cr>
 map <tab> :bn<cr>
 
-
 map ,q :q!<CR>
 map ,w :wq <CR>
 imap jj <esc>
+
+"set Tab as emmet's trigger 
+"let g:user_emmet_leader_key = '<Tab>'
+"let g:use_emmet_complete_tag = 1
