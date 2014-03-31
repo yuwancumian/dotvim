@@ -21,8 +21,7 @@ Bundle 'vim-less'
 Bundle 'TabBar'
 Bundle 'ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
-Bundle 'EasyColour'
-"Bundle 'php.vim-for-php5'
+
 " -------------------------- 配色 -------------------------
 " 配色
 
