@@ -16,6 +16,7 @@ Bundle 'mattn/gist-vim'
 Bundle 'junegunn/goyo.vim'
 Bundle 'jQuery'
 Bundle 'ack.vim'
+Bundle 'colorselector'
 "Bundle 'minibufexpl.vim'
 Bundle 'vim-less'
 Bundle 'TabBar'
@@ -65,6 +66,7 @@ let g:ctrlp_cmd = 'CtrlP'
 
 " highlight current line                                                                                                                                                                       
 set cursorline
+set cursorcolumn
 
 au BufRead,BufNewFile *.js set syntax=jquery
 
