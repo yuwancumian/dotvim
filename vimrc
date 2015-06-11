@@ -24,6 +24,12 @@ Bundle 'ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
 
 " -------------------------- 配色 -------------------------
+
+
+" 开启语法高亮
+syntax on
+
+
 " 配色
 
 colorscheme molokai 
