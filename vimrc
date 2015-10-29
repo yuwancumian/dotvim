@@ -16,16 +16,17 @@ Bundle 'mattn/gist-vim'
 Bundle 'junegunn/goyo.vim'
 Bundle 'jQuery'
 Bundle 'ack.vim'
-Bundle 'bling/vim-airline'
+Bundle 'scrooloose/nerdtree'
+Bundle 'ctrlp.vim'
 Bundle 'colorselector'
-"Bundle 'minibufexpl.vim'
 Bundle 'vim-less'
 Bundle 'godlygeek/csapprox'
-"Bundle 'TabBar'
-Bundle 'ctrlp.vim'
-Bundle 'scrooloose/nerdtree'
+Bundle "Lokaltog/vim-powerline"
 
-" -------------------------- 配色 -------------------------
+"Bundle 'TabBar'
+"Bundle 'bling/vim-airline'
+"Bundle 'minibufexpl.vim'
+
 
 
 " 开启语法高亮
@@ -33,29 +34,21 @@ syntax on
 
 
 " 配色
-colorscheme molokai
+set t_Co=25b
+colorscheme Molokai
 
 filetype plugin indent on    " required!
 
-set laststatus=2
-"let g:Powerline_symbols = 'unicode'
-let g:airline_powerline_fonts = 1
-if !exists('g:airline_symbols')
-	let g:airline_symbols = {}
-endif
-let g:airline_symbols.space = "\ua0"
-let g:airline_exclude_filename = []
-let g:Powerline_symbols='fancy'
-let g:airline_powerline_fonts=0
-let Powerline_symbols='fancy'
-let g:bufferline_echo=0
-set laststatus=2
-set t_Co=256
 "set fillchars+=stl:\ ,stlnc:\
 
 
+set laststatus=2
+"let g:Powerline_symbols='unicode'
+let g:Powerline_symbols = 'fancy'
+let Powerline_symbols='compatible'
 
 
+" -------------------------- 配色 -------------------------
 "显示行号
 set nu
 
@@ -72,29 +65,16 @@ set ruler
 "更改配色方案
 set background=dark
 
-set guifont=Liberation_Mono_for_Powerline:h20
 let g:airline_powerline_fonts = 1
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 11
+"
 
-let g:AirlineTheme="murmur"
-  if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-  endif
 
-  " unicode symbols
-let g:airline_left_sep = '»'
-let g:airline_left_sep = '▶'
-let g:airline_right_sep = '«'
-let g:airline_right_sep = '◀'
-let g:airline_symbols.linenr = '␊'
-let g:airline_symbols.linenr = '␤'
-let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.branch = '⎇'
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.paste = 'Þ'
-let g:airline_symbols.paste = '∥'
-let g:airline_symbols.whitespace = 'Ξ'
 
-"设置代码缩进
+
+
+
+" 设置代码缩进
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
