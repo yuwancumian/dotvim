@@ -1,5 +1,6 @@
 set nocompatible    " be iMproved
 filetype off        " required!
+set nobackup
 
 " let Vundle manage Vundle
 " required!
@@ -20,8 +21,9 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'ctrlp.vim'
 Bundle 'colorselector'
 Bundle 'vim-less'
-Bundle 'godlygeek/csapprox'
+Bundle 'ternjs/tern_for_vim'
 Bundle "Lokaltog/vim-powerline"
+Bundle "qpkorr/vim-bufkill"
 
 "Bundle 'TabBar'
 "Bundle 'bling/vim-airline'
@@ -35,7 +37,7 @@ syntax on
 
 " 配色
 set t_Co=25b
-colorscheme Molokai
+colorscheme molokai
 
 filetype plugin indent on    " required!
 
@@ -94,6 +96,10 @@ let g:ctrlp_cmd = 'CtrlP'
 " highlight current line                                                                                                                                                                       
 set cursorline
 set cursorcolumn
+
+
+"set tern your js
+let g:tern_show_signature_in_pum = 1
 
 au BufRead,BufNewFile *.js set syntax=jquery
 
