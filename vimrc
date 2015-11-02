@@ -67,15 +67,6 @@ set ruler
 "更改配色方案
 set background=dark
 
-let g:airline_powerline_fonts = 1
-set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 11
-"
-
-
-
-
-
-
 " 设置代码缩进
 set tabstop=4
 set softtabstop=4
@@ -107,9 +98,22 @@ map <s-tab> :bp<cr>
 map <tab> :bn<cr>
 
 map ,q :q!<CR>
-map ,w :wq <CR>
-imap jj <esc>
+map ,w :w<CR>
+map ,s :wq<CR>
+nnoremap <Left> <nop>
+nnoremap <Up> <nop>
+nnoremap <Down> <nop>
+nnoremap <Right> <nop>
+inoremap <Left> <nop>
+inoremap <Up> <nop>
+inoremap <Down> <nop>
+inoremap <Right> <nop>
+nmap <Space> viw
 
+inoremap <c-j> <down>
+inoremap <c-k> <up>
+inoremap <c-l> <right>
+inoremap <c-h> <left>
 "set Tab as emmet's trigger 
 "let g:user_emmet_leader_key = '<Tab>'
 "let g:use_emmet_complete_tag = 1
