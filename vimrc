@@ -21,9 +21,11 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'ctrlp.vim'
 Bundle 'colorselector'
 Bundle 'vim-less'
-Bundle 'ternjs/tern_for_vim'
 Bundle "Lokaltog/vim-powerline"
 Bundle "qpkorr/vim-bufkill"
+Bundle "edsono/vim-matchit"
+Bundle "tpope/vim-surround"
+Bundle "scrooloose/nerdcommenter"
 
 "Bundle 'TabBar'
 "Bundle 'bling/vim-airline'
@@ -57,6 +59,11 @@ set nu
 set t_Co=256
 hi Normal ctermbg=NONE
 
+"同意成系统剪切板
+set clipboard=unnamed
+
+"切换toggle
+set pastetoggle=<F9>
 
 "自动缩排
 set autoindent
@@ -98,8 +105,9 @@ map <s-tab> :bp<cr>
 map <tab> :bn<cr>
 
 map ,q :q!<CR>
-map ,w :w<CR>
-map ,s :wq<CR>
+"map ,w :w<CR>
+"map :W :w<CR>
+"map ,s :wq<CR>
 nnoremap <Left> <nop>
 nnoremap <Up> <nop>
 nnoremap <Down> <nop>
