@@ -104,7 +104,7 @@ au BufRead,BufNewFile *.js set syntax=jquery
 map <s-tab> :bp<cr>
 map <tab> :bn<cr>
 
-map ,q :q!<CR>
+"map ,q :q!<CR>
 "map ,w :w<CR>
 "map :W :w<CR>
 "map ,s :wq<CR>
