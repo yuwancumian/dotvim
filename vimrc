@@ -112,10 +112,10 @@ nnoremap <Left> <nop>
 nnoremap <Up> <nop>
 nnoremap <Down> <nop>
 nnoremap <Right> <nop>
-inoremap <Left> <nop>
-inoremap <Up> <nop>
-inoremap <Down> <nop>
-inoremap <Right> <nop>
+"inoremap <Left> <nop>
+"inoremap <Up> <nop>
+"inoremap <Down> <nop>
+"inoremap <Right> <nop>
 nmap <Space> viw
 
 inoremap <c-j> <down>
