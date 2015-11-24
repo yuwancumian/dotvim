@@ -10,7 +10,7 @@ call vundle#rc()
 
 " vim-scripts repos
 Bundle 'gmarik/vundle'
-Bundle 'snipMate'
+"Bundle 'snipMate'
 Bundle 'mattn/emmet-vim'
 Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
@@ -26,6 +26,9 @@ Bundle "qpkorr/vim-bufkill"
 Bundle "edsono/vim-matchit"
 Bundle "tpope/vim-surround"
 Bundle "scrooloose/nerdcommenter"
+Bundle "mhinz/vim-startify"
+Bundle "SirVer/ultisnips"
+Bundle "honza/vim-snippets"
 
 "Bundle 'TabBar'
 "Bundle 'bling/vim-airline'
@@ -68,6 +71,18 @@ set pastetoggle=<F9>
 "自动缩排
 set autoindent
 
+"set showtabline=1
+"set guioptions=e
+noremap <D-1> :tabn 1<CR>
+noremap <D-2> :tabn 2<CR>
+noremap <D-3> :tabn 3<CR>
+noremap <D-4> :tabn 4<CR>
+noremap <D-5> :tabn 5<CR>
+noremap <D-6> :tabn 6<CR>
+noremap <D-7> :tabn 7<CR>
+noremap <D-8> :tabn 8<CR>
+noremap <D-9> :tabn 9<CR>
+
 "是否显示标尺
 set ruler
 
@@ -78,26 +93,32 @@ set background=dark
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
+set expandtab "设置tab自动替换为空格
+"设置tab和空格的显示字符
+set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<
 
 "setup nerdtree 
-let NERDTreeWinPos = 'right'
+let NERDTreeWinPos = 'left'
 "autocmd vimenter * NERDTree
 "autocmd vimenter * if !argc() | NERDTree | endif
+set guioptions-=L
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let NERDTreeIgnore = ['\.pyc$','node_modules','dist','design']
 
 "设置ctrlp
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|design)|(\.(swp|ico|git|svn|jpg|png|gif))$'
 
-" highlight current line                                                                                                                                                                       
+"设置ultisnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" highlight current line
 set cursorline
 set cursorcolumn
-
-
-"set tern your js
-let g:tern_show_signature_in_pum = 1
 
 au BufRead,BufNewFile *.js set syntax=jquery
 
