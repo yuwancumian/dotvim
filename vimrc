@@ -20,8 +20,8 @@ Bundle 'ack.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'ctrlp.vim'
 Bundle 'colorselector'
-Bundle 'vim-less'
 Bundle "Lokaltog/vim-powerline"
+Bundle "groenewege/vim-less"
 Bundle "qpkorr/vim-bufkill"
 Bundle "edsono/vim-matchit"
 Bundle "tpope/vim-surround"
@@ -115,6 +115,7 @@ let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist|design)|(\.(swp|ico
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsEditSplit="vertical"
 
 " highlight current line
 set cursorline
