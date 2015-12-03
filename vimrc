@@ -1,6 +1,7 @@
 set nocompatible    " be iMproved
 filetype off        " required!
 set nobackup
+set noswapfile 
 
 " let Vundle manage Vundle
 " required!
