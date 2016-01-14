@@ -110,7 +110,7 @@ let NERDTreeIgnore = ['\.pyc$','node_modules','dist','design']
 "设置ctrlp
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|html|cache|www|target|dist|design)|(\.(swp|ico|git|svn|jpg|png|gif))$'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|html|cache|www|target|dist|design|doc|sketch)|(\.(swp|ico|git|svn|jpg|png|gif))$'
 
 "设置ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
