@@ -30,6 +30,7 @@ Bundle "scrooloose/nerdcommenter"
 Bundle "mhinz/vim-startify"
 Bundle "SirVer/ultisnips"
 Bundle "honza/vim-snippets"
+Bundle "jeffkreeftmeijer/vim-numbertoggle"
 
 "Bundle 'TabBar'
 "Bundle 'bling/vim-airline'
@@ -58,16 +59,20 @@ let Powerline_symbols='compatible'
 
 " -------------------------- 配色 -------------------------
 "显示行号
-set nu
+"set relativenumber 
+set number 
 
 set t_Co=256
 hi Normal ctermbg=NONE
 
-"同意成系统剪切板
+"统一成系统剪切板
 set clipboard=unnamed
 
-"切换toggle
-set pastetoggle=<F9>
+"切换paste
+set pastetoggle="<F9>"
+
+"切换相对数字和绝对数字
+let g:NumberToggleTrigger="<F3>"
 
 "自动缩排
 set autoindent
