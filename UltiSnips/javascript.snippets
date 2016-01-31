@@ -7,37 +7,37 @@ var cx = React.addons.classSet;
 endsnippet
 
 snippet cdm "component did mount" b
-componentDidMount() {
+componentDidMount: function() {
 	${1}
 },$0
 endsnippet
 
 snippet cdup "component did update" b
-componentDidUpdate(prevProps, prevState) {
+componentDidUpdate: function(prevProps, prevState) {
 	${1}
 },$0
 endsnippet
 
 snippet cwm "component will mount" b
-componentWillMount() {
+componentWillMount: function() {
 	${1}
 },$0
 endsnippet
 
 snippet cwr "component will receive props" b
-componentWillReceiveProps(nextProps) {
+componentWillReceiveProps: function(nextProps) {
 	${1}
 },$0
 endsnippet
 
 snippet cwun "component will unmount" b
-componentWillUnmount() {
+componentWillUnmount: function() {
 	${1}
 },$0
 endsnippet
 
 snippet cwu "component will update" b
-componentWillUpdate(nextProps, nextState) {
+componentWillUpdate: function(nextProps, nextState) {
 	${1}
 },$0
 endsnippet
@@ -53,7 +53,7 @@ forceUpdate(${1:callback});
 endsnippet
 
 snippet gdp "get default props" b
-getDefaultProps() {
+getDefaultProps: function() {
 	return {
 		${1}
 	};
@@ -61,7 +61,7 @@ getDefaultProps() {
 endsnippet
 
 snippet gis "get initial state" b
-getInitialState() {
+getInitialState: function() {
 	return {
 		${1}: ${2}
 	};
@@ -76,6 +76,20 @@ snippet jsx "define jsx dom" b
 /**
  * @jsx React.DOM
  */
+
+var React = require('react');
+}
+var ${2:ClassName} = React.createClass({
+
+render: function() {
+	return (
+		${VISUAL}$4
+	);
+}
+
+});
+$0
+${3:module.exports = $2;}
 endsnippet
 
 snippet pt "propTypes" b
@@ -85,28 +99,20 @@ propTypes: {
 endsnippet
 
 snippet rcc "create class/component" b
-${1:/**
-* @jsx React.DOM
-*/}
+var ${1:ClassName} = React.createClass({
 
-import React, { ${2:PropTypes, }Component } from 'react';
-
-class ${3:ClassName} extends Component {
-
-	$0
-	render() {
-		return (
-			${VISUAL}$5
-		);
-	}
-
+render: function() {
+	return (
+		${VISUAL}$2
+	);
 }
 
-${4:export default $3;}
+});
+$0
 endsnippet
 
 snippet ren
-render() {
+render: function() {
 	return (
 		${1:<div />}
 	);
@@ -120,7 +126,7 @@ this.setState({
 endsnippet
 
 snippet scu "should component update"
-shouldComponentUpdate(nextProps, nextState) {
+shouldComponentUpdate: function(nextProps, nextState) {
 	${1}
 },$0
 endsnippet
