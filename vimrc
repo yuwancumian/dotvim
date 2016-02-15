@@ -36,11 +36,8 @@ Bundle "jeffkreeftmeijer/vim-numbertoggle"
 "Bundle 'bling/vim-airline'
 "Bundle 'minibufexpl.vim'
 
-
-
 " 开启语法高亮
 syntax on
-
 
 " 配色
 set t_Co=25b
@@ -49,7 +46,6 @@ colorscheme molokai
 filetype plugin indent on    " required!
 
 "set fillchars+=stl:\ ,stlnc:\
-
 
 set laststatus=2
 "let g:Powerline_symbols='unicode'
