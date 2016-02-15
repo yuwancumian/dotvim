@@ -18,7 +18,7 @@ Bundle 'mattn/gist-vim'
 Bundle 'junegunn/goyo.vim'
 Bundle 'jQuery'
 Bundle 'ack.vim'
-Bundle 'scrooloose/nerdtree'
+"Bundle 'scrooloose/nerdtree'
 Bundle 'ctrlp.vim'
 Bundle 'colorselector'
 Bundle "Lokaltog/vim-powerline"
@@ -77,6 +77,10 @@ let g:NumberToggleTrigger="<F3>"
 "自动缩排
 set autoindent
 
+set nofoldenable
+"set foldmethod=syntax
+set foldmethod=indent
+
 "set showtabline=1
 "set guioptions=e
 noremap <D-1> :tabn 1<CR>
@@ -111,6 +115,7 @@ set guioptions-=L
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 let NERDTreeIgnore = ['\.pyc$','node_modules','dist','design']
+let NERDTreeStatusline="%{matchstr(getline('.'), '\\s\\zs\\w\\(.*\\)')}"
 
 "设置ctrlp
 let g:ctrlp_map = '<c-p>'
