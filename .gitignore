@@ -3,3 +3,4 @@ bundle/*
 .netrwhist
 !bundle/vundle
 !bundle/snipMate
+bundle/vundle/.netrwhist
