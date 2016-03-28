@@ -31,6 +31,7 @@ Bundle "mhinz/vim-startify"
 Bundle "SirVer/ultisnips"
 Bundle "honza/vim-snippets"
 Bundle "jeffkreeftmeijer/vim-numbertoggle"
+Bundle "pangloss/vim-javascript"
 
 "Bundle 'TabBar'
 "Bundle 'bling/vim-airline'
@@ -116,7 +117,7 @@ let NERDTreeStatusline="%{matchstr(getline('.'), '\\s\\zs\\w\\(.*\\)')}"
 "设置ctrlp
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|html|www|target|dist|design|doc|sketch)|(\.(swp|ico|git|svn|jpg|png|gif))$'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|html|www|target|public|dist|design|doc|sketch)|(\.(swp|ico|git|svn|jpg|png|gif))$'
 
 "设置ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -129,6 +130,7 @@ set cursorline
 set cursorcolumn
 
 au BufRead,BufNewFile *.js set syntax=jquery
+au BufReadPost *.hbs set syntax=html
 
 map <s-tab> :bp<cr>
 map <tab> :bn<cr>
