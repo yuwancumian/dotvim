@@ -132,6 +132,7 @@ let g:UltiSnipsEditSplit="vertical"
 "set cursorcolumn
 
 au BufRead,BufNewFile *.js set syntax=jquery
+au BufReadPost *.hbs set syntax=html
 
 map <s-tab> :bp<cr>
 map <tab> :bn<cr>
