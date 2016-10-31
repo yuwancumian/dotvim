@@ -6,8 +6,8 @@ set noswapfile
 " let Vundle manage Vundle
 " required!
 
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call  vundle#begin()
 
 " vim-scripts repos
 Bundle 'gmarik/vundle'
@@ -18,40 +18,43 @@ Bundle 'mattn/gist-vim'
 Bundle 'junegunn/goyo.vim'
 Bundle 'jQuery'
 Bundle 'ack.vim'
-"Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdtree'
 Bundle 'ctrlp.vim'
 Bundle 'colorselector'
-Bundle "Lokaltog/vim-powerline"
-Bundle "groenewege/vim-less"
-Bundle "qpkorr/vim-bufkill"
-Bundle "edsono/vim-matchit"
-Bundle "tpope/vim-surround"
-Bundle "scrooloose/nerdcommenter"
-Bundle "mhinz/vim-startify"
-Bundle "SirVer/ultisnips"
-Bundle "honza/vim-snippets"
-Bundle "jeffkreeftmeijer/vim-numbertoggle"
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'groenewege/vim-less'
+Bundle 'qpkorr/vim-bufkill'
+Bundle 'edsono/vim-matchit'
+Bundle 'tpope/vim-surround'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'mhinz/vim-startify'
+"Bundle 'SirVer/ultisnips'
+Bundle 'honza/vim-snippets'
+Bundle 'jeffkreeftmeijer/vim-numbertoggle'
+Plugin 'chriskempson/base16-vim'
 
 "Bundle 'TabBar'
-"Bundle 'bling/vim-airline'
+"Plugin 'bling/vim-airline'
 "Bundle 'minibufexpl.vim'
+call vundle#end()            " required
+filetype plugin indent on
 
 " 开启语法高亮
 syntax on
 
 " 配色
 set t_Co=25b
-colorscheme molokai
-
-filetype plugin indent on    " required!
+"colorscheme solarized
 
 "set fillchars+=stl:\ ,stlnc:\
-
-set laststatus=2
+set backspace=2
+set laststatus=1
 "let g:Powerline_symbols='unicode'
 let g:Powerline_symbols = 'fancy'
 let Powerline_symbols='compatible'
 
+"设置macvim 字体
+set gfn=Monaco:h14
 
 " -------------------------- 配色 -------------------------
 "显示行号
@@ -96,10 +99,10 @@ set ruler
 set background=dark
 
 " 设置代码缩进
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set expandtab "设置tab自动替换为空格
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2  "使用 o 换行后的宽度
+set expandtab "设置 tab 自动替换为空格
 "设置tab和空格的显示字符
 set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<
 
@@ -111,12 +114,12 @@ set guioptions-=L
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 let NERDTreeIgnore = ['\.pyc$','node_modules','dist','design']
-let NERDTreeStatusline="%{matchstr(getline('.'), '\\s\\zs\\w\\(.*\\)')}"
+"let NERDTreeStatusline="%{matchstr(getline('.'), '\\s\\zs\\w\\(.*\\)')}"
 
 "设置ctrlp
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|html|www|target|dist|design|doc|sketch)|(\.(swp|ico|git|svn|jpg|png|gif))$'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|www|target|design|doc|sketch)|(\.(swp|ico|git|svn|jpg|png|gif))$'
 
 "设置ultisnips
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -125,8 +128,8 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
 
 " highlight current line
-set cursorline
-set cursorcolumn
+"set cursorline
+"set cursorcolumn
 
 au BufRead,BufNewFile *.js set syntax=jquery
 
